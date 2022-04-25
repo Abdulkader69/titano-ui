@@ -1,0 +1,341 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #04071f;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+#main-header .menu-area li.new a::before {
+  content: 'New!';
+  box-shadow: 2px 2px 1px 0 rgb(0 0 0 / 50%);
+  @apply absolute -top-2 right-[18px] duration-[0.2s] block h-[14px] w-[36px] rotate-[8deg] rounded-sm bg-[#d81384] text-white text-[10px] font-extrabold tracking-[1px] leading-[13px] text-center;
+}
+.btn {
+  @apply cursor-pointer py-[9px] px-5 border-none  rounded-md flex flex-row flex-nowrap justify-center items-center gap-1;
+}
+.btn-primary {
+  background: linear-gradient(
+    179deg,
+    #2b38a3,
+    #655afd 49.445%,
+    #665afe 50%,
+    #655afd 51.55%,
+    #2b38a3
+  );
+  background-size: 100% 200%;
+  @apply relative w-full text-white text-sm font-semibold leading-[21px] overflow-hidden duration-[0.4s];
+}
+.btn-primary:hover {
+  background-position-y: 100%;
+}
+.portfolio .btn-primary {
+  @apply p-[10px] text-white text-sm font-semibold leading-[21px] text-center;
+}
+.btn-passive {
+  @apply relative border border-solid border-[hsla(0,0%,100%,0.4)] bg-transparent text-[hsla(0,0%,100%,0.6)] text-xs leading-[17px]  duration-[0.4s];
+}
+.btn-passive:hover {
+  @apply border-[#2938a2];
+}
+.app-background {
+  @apply fixed left-1/2 right-0 top-0 bottom-0 z-[1] w-full max-w-[1250px] -translate-x-2/4;
+}
+.app-background-1 {
+  position: absolute;
+  top: 10vw;
+  left: 23vw;
+  background: radial-gradient(
+    circle at 20% -25%,
+    #aa32af 0,
+    #25b4ce 22.95%,
+    #800597 70.4%,
+    #b4004c 100%
+  );
+  opacity: 0.2;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  z-index: 2;
+  -webkit-animation-name: floating-1;
+  animation-name: floating-1;
+  -webkit-animation-duration: 150s;
+  animation-duration: 150s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes floating-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-90%, 90%);
+    transform: translate(-90%, 90%);
+  }
+  40% {
+    -webkit-transform: translate(50%, -80%);
+    transform: translate(50%, -80%);
+  }
+  60% {
+    -webkit-transform: translate(-70%, -30%);
+    transform: translate(-70%, -30%);
+  }
+  80% {
+    -webkit-transform: translate(-10%, -20%);
+    transform: translate(-10%, -20%);
+  }
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+@keyframes floating-1 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-90%, 90%);
+    transform: translate(-90%, 90%);
+  }
+  40% {
+    -webkit-transform: translate(50%, -80%);
+    transform: translate(50%, -80%);
+  }
+  60% {
+    -webkit-transform: translate(-70%, -30%);
+    transform: translate(-70%, -30%);
+  }
+  80% {
+    -webkit-transform: translate(-10%, -20%);
+    transform: translate(-10%, -20%);
+  }
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+.app-background-2 {
+  position: absolute;
+  bottom: -220px;
+  left: 10px;
+  background: radial-gradient(
+    circle at 20% -25%,
+    #aa32af 0,
+    #25b4ce 22.95%,
+    #800597 70.4%,
+    #b4004c 100%
+  );
+  opacity: 0.2;
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
+  -webkit-filter: blur(15px);
+  filter: blur(15px);
+  z-index: 2;
+  -webkit-animation-name: floating-2;
+  animation-name: floating-2;
+  -webkit-animation-duration: 150s;
+  animation-duration: 150s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes floating-2 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  25% {
+    -webkit-transform: translate(120px, 120px);
+    transform: translate(120px, 120px);
+  }
+  50% {
+    -webkit-transform: translate(-120px);
+    transform: translate(-120px);
+  }
+  75% {
+    -webkit-transform: translateY(-120px);
+    transform: translateY(-120px);
+  }
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+@keyframes floating-2 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  25% {
+    -webkit-transform: translate(120px, 120px);
+    transform: translate(120px, 120px);
+  }
+  50% {
+    -webkit-transform: translate(-120px);
+    transform: translate(-120px);
+  }
+  75% {
+    -webkit-transform: translateY(-120px);
+    transform: translateY(-120px);
+  }
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+.app-background-3 {
+  position: absolute;
+  bottom: -130px;
+  right: -100px;
+  background: radial-gradient(
+    circle at 20% -25%,
+    #aa32af 0,
+    #25b4ce 22.95%,
+    #800597 70.4%,
+    #b4004c 100%
+  );
+  opacity: 0.3;
+  height: 800px;
+  width: 800px;
+  border-radius: 50%;
+  -webkit-filter: blur(35px);
+  filter: blur(35px);
+  z-index: 0;
+  -webkit-animation-name: floating-3;
+  animation-name: floating-3;
+  -webkit-animation-duration: 180s;
+  animation-duration: 180s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes floating-3 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-10%, 20%);
+    transform: translate(-10%, 20%);
+  }
+  40% {
+    -webkit-transform: translate(30%, -30%);
+    transform: translate(30%, -30%);
+  }
+  60% {
+    -webkit-transform: translate(-20%, -30%);
+    transform: translate(-20%, -30%);
+  }
+  80% {
+    -webkit-transform: translate(-10%, -20%);
+    transform: translate(-10%, -20%);
+  }
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+@keyframes floating-3 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-10%, 20%);
+    transform: translate(-10%, 20%);
+  }
+  40% {
+    -webkit-transform: translate(30%, -30%);
+    transform: translate(30%, -30%);
+  }
+  60% {
+    -webkit-transform: translate(-20%, -30%);
+    transform: translate(-20%, -30%);
+  }
+  80% {
+    -webkit-transform: translate(-10%, -20%);
+    transform: translate(-10%, -20%);
+  }
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+.wallet-dropdown-icon {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(0, 0%, 100%, 0.1);
+  border-radius: 100%;
+  transition-duration: 0.4s;
+}
+.wallet-dropdown-icon:hover {
+  box-shadow: 0 8px 12px 0 rgb(0 0 0 / 30%);
+}
+.wallet-dropdown-icon:hover:after {
+  position: absolute;
+  top: -12px;
+  right: -32px;
+  display: block;
+  content: ' ';
+  width: 60px;
+  height: 20px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background: linear-gradient(
+    179deg,
+    hsla(0, 0%, 100%, 0),
+    hsla(0, 0%, 100%, 0.4) 50%,
+    hsla(0, 0%, 100%, 0)
+  );
+  -webkit-animation-name: wallet-dropdown-icon-glimmer;
+  animation-name: wallet-dropdown-icon-glimmer;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+}
+@-webkit-keyframes wallet-dropdown-icon-glimmer {
+  to {
+    -webkit-transform: translate(-40px, 40px);
+    transform: translate(-40px, 80px);
+  }
+}
+@keyframes wallet-dropdown-icon-glimmer {
+  to {
+    -webkit-transform: translate(-40px, 40px);
+    transform: translate(-40px, 80px);
+  }
+}
+tspan {
+  font-size: 12px;
+}
