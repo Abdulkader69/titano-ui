@@ -3,8 +3,7 @@ import React from 'react';
 const GraphCharts = () => {
   return (
     <svg
-      className="recharts-surface"
-      width="670"
+      className="recharts-surface w-full"
       height="148"
       viewBox="0 0 670 148"
       version="1.1"

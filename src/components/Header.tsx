@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { Popover, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import IconWallet from './IconWallet';
 import IconProfile from './IconProfile';
 import { useRouter } from 'next/router';
+import MobileNav from './MobileNav';
 
 export default function Header() {
   const router = useRouter();
+  const [menuExpanded, setMenuExpanded] = useState(false);
   return (
     <header
       id="main-header"
-      className="shadow-header py-8 fixed top-0 left-0 w-full z-50 bg-[#04071f]/20"
+      className={`shadow-header py-4 lg:py-8 fixed top-0 left-0 w-full z-50  ${
+        menuExpanded ? 'bg-black' : 'bg-[#04071f]/20'
+      }`}
     >
       <div className="w-full max-w-siteContainer mx-auto px-4 flex items-center justify-between">
-        <div className="logo max-w-[150px]">
+        <div className="logo max-w-[100px] lg:max-w-[150px]">
           <Link href="/">
             <a>
               <img
@@ -25,7 +29,7 @@ export default function Header() {
             </a>
           </Link>
         </div>
-        <div className="menu-area">
+        <div className="menu-area hidden lg:block">
           <ul className="flex items-center justify-center">
             <li
               className={`text-[15px] text-white transition ease-in relative mr-10 pt-2 pb-1 border-b border-solid hover:border-[#d81384] ${
@@ -108,7 +112,7 @@ export default function Header() {
           </ul>
         </div>
         <div className="login-area flex items-center">
-          <div className="wallet mr-5">
+          <div className="wallet mr-5 hidden lg:block">
             <Popover className="relative">
               {/* {({ open }) => ( */}
               <>
@@ -149,7 +153,32 @@ export default function Header() {
               {/* )} */}
             </Popover>
           </div>
-          <div className="wallet-dropdown">
+          <div className="mobile-menu-wrap mr-4 block lg:hidden">
+            <button
+              className="menu-trigger mt-1 cursor-pointer"
+              type="button"
+              onClick={() => {
+                setMenuExpanded(!menuExpanded);
+              }}
+            >
+              <span
+                className={`block relative w-[25px] h-[2px] bg-white mb-[5px] transition ease-in ${
+                  menuExpanded ? 'rotate-45 top-[7px]' : 'rotate-0 top-0'
+                }`}
+              ></span>
+              <span
+                className={`block relative w-[25px] h-[2px] bg-white mb-[5px] transition ease-in ${
+                  menuExpanded ? '-rotate-45' : 'rotate-0'
+                }`}
+              ></span>
+              <span
+                className={`block relative w-[25px] h-[2px] bg-white transition ease-in ${
+                  menuExpanded ? 'opacity-0' : 'opacity-100'
+                }`}
+              ></span>
+            </button>
+          </div>
+          <div className="profile-dropdown">
             <Popover className="relative">
               {/* {({ open }) => ( */}
               <>
@@ -190,6 +219,13 @@ export default function Header() {
             </Popover>
           </div>
         </div>
+      </div>
+      <div
+        className={`mobile-menu fixed top-[72px] right-0 w-full h-[calc(100%-72px)] bg-black transition ease-in opacity-100 lg:opacity-0 pointer-events-auto lg:pointer-events-none ${
+          menuExpanded ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <MobileNav />
       </div>
     </header>
   );

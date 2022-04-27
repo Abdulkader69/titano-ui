@@ -15,13 +15,13 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="w-full max-w-siteContainer m-auto">
+      <div className="w-full max-w-siteContainer m-auto px-4">
         <div className="dashboard py-16 flex flex-col gap-8">
           <div className="column flex flex-row flex-nowrap gap-8">
-            <div className="containerr p-[10px] rounded-[20px] min-h-[338px] min-w-full flex flex-row justify-between bg-[rgba(4,7,31,.6)] shadow-Site border border-solid border-[hsla(0,0%,100%,.07)] z-10">
-              <div className="portfolio py-6 px-7 min-w-[240px] w-fit h-[318px] flex flex-col gap-4">
+            <div className="containerr p-[10px] rounded-[20px] min-h-[338px] min-w-full flex flex-row justify-evenly lg:justify-between bg-[rgba(4,7,31,.6)] shadow-Site border border-solid border-[hsla(0,0%,100%,.07)] z-10 flex-wrap lg:flex-nowrap">
+              <div className="portfolio py-6 px-7 min-w-[240px] w-full sm:w-fit h-[318px] flex flex-col gap-4 order-2 lg:order-1 mb-10 lg:mb-0">
                 <div className="portfolio-wrapper flex flex-col items-center">
-                  <h1 className="text-xs text-[#a7c9ee] font-semibold uppercase tracking-[1.17px]">
+                  <h1 className="text-[10px] xl:text-xs text-[#a7c9ee] font-semibold uppercase tracking-[1.17px]">
                     Portfolio
                   </h1>
                   <div className="portfolio-icon h-[70px] w-[70px] flex justify-center items-center mt-[18px] mb-[9px]">
@@ -84,25 +84,25 @@ const Home: NextPage = () => {
                   View Chart
                 </a>
               </div>
-              <div className="portfolio-content px-[52px] pt-[23px] w-full min-h-full flex flex-col">
+              <div className="portfolio-content px-[20px] sm:px-[52px] pt-[23px] w-full flex flex-col order-1 lg:order-2 mb-10 lg:mb-0">
                 <div className="portfolio-content-column h-1/2 flex-row flex-nowrap items-start grid grid-cols-2">
                   <div className="lg-earnings w-[unset] break-words">
                     <div className="lg-earnings-title flex items-center">
-                      <h4 className="text-xs text-[#a7c9ee] uppercase whitespace-nowrap tracking-[1.17px] font-semibold mb-1">
+                      <h4 className="text-[10px] xl:text-xs text-[#a7c9ee] uppercase whitespace-nowrap tracking-[1.17px] font-semibold mb-1">
                         HOLDINGS
                       </h4>
                     </div>
                     <div className="lg-earnings-dollar flex flex-row items-start">
-                      <div className="s relative text-white text-[35px] leading-9 font-extrabold">
+                      <div className="s relative text-white text-[20px] sm:text-[25px] md:text-[35px] leading-9 font-extrabold">
                         $
                       </div>
-                      <div className="b relative text-white text-[55px] leading-[75px] font-extrabold -mt-2 tracking-[-1px]">
+                      <div className="b relative text-white text-[30px] sm:text-[45px] md:text-[55px] leading-[65px] sm:leading-[75px] font-extrabold -mt-2 tracking-[-1px]">
                         0
                       </div>
-                      <div className="s relative text-white text-[35px] leading-9 font-extrabold">
+                      <div className="s relative text-white text-[20px] sm:text-[25px] md:text-[35px] leading-9 font-extrabold">
                         .00
                       </div>
-                      <div className="s relative text-white text-[35px] leading-9 font-extrabold"></div>
+                      <div className="s relative text-white text-[20px] sm:text-[25px] md:text-[35px] leading-9 font-extrabold"></div>
                     </div>
                     <div className="lg-earnings-sphere flex flex-row items-center gap-1">
                       <img
@@ -117,21 +117,21 @@ const Home: NextPage = () => {
                   </div>
                   <div className="lg-earnings w-[unset] break-words">
                     <div className="lg-earnings-title flex items-center">
-                      <h4 className="text-xs text-[#a7c9ee] uppercase whitespace-nowrap tracking-[1.17px] font-semibold mb-1">
+                      <h4 className="text-[10px] xl:text-xs text-[#a7c9ee] uppercase whitespace-nowrap tracking-[1.17px] font-semibold mb-1">
                         DAILY EARNINGS
                       </h4>
                     </div>
                     <div className="lg-earnings-dollar flex flex-row items-start">
-                      <div className="s relative text-white text-[35px] leading-9 font-extrabold">
+                      <div className="s relative text-white text-[20px] sm:text-[25px] md:text-[35px] leading-9 font-extrabold">
                         $
                       </div>
-                      <div className="b relative text-white text-[55px] leading-[75px] font-extrabold -mt-2 tracking-[-1px]">
+                      <div className="b relative text-white text-[30px] sm:text-[45px] md:text-[55px] leading-[65px] sm:leading-[75px] font-extrabold -mt-2 tracking-[-1px]">
                         0
                       </div>
-                      <div className="s relative text-white text-[35px] leading-9 font-extrabold">
+                      <div className="s relative text-white text-[20px] sm:text-[25px] md:text-[35px] leading-9 font-extrabold">
                         .00
                       </div>
-                      <div className="s relative text-white text-[35px] leading-9 font-extrabold"></div>
+                      <div className="s relative text-white text-[20px] sm:text-[25px] md:text-[35px] leading-9 font-extrabold"></div>
                     </div>
                     <div className="lg-earnings-sphere flex flex-row items-center gap-1">
                       <img
@@ -153,13 +153,13 @@ const Home: NextPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="rebase pt-6 pr-12 flex flex-col items-center">
-                <div className="rebase-circle relative flex justify-center items-center mb-9 w-[15vw] max-w-[162px]">
+              <div className="rebase pt-6 sm:pr-12 flex flex-col items-center w-full sm:w-auto order-3 lg:order-3">
+                <div className="rebase-circle relative flex justify-center items-center mb-9 w-[162px]">
                   <div className="CircularProgress w-[160px] h-[160px] relative">
                     <GraphCircle />
                   </div>
                   <div className="rebase-circle-content absolute top-[20%] left-[32%] text-center">
-                    <p className="text-[13px] text-[hsla(0,0%,100%,.6)] text-center max-w-[160px] m-auto pb-1">
+                    <p className="text-[10px] xl:text-[13px] text-[hsla(0,0%,100%,.6)] text-center max-w-[160px] m-auto pb-1">
                       REBASES
                       <br />
                       EVERY 30
@@ -188,72 +188,72 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="column flex flex-row flex-nowrap gap-8">
-            <div className="container-width grid w-full h-fit gap-7">
-              <div className="sphere-container relative rounded-[20px] flex flex-row justify-around bg-[rgba(4,7,31,.6)] shadow-Site border border-solid border-[hsla(0,0%,100%,.07)] gap-7 py-7 px-8 z-10">
-                <div className="container-with-border-column relative flex items-start flex-col">
+          <div className="column flex flex-row flex-wrap lg:flex-nowrap gap-8">
+            <div className="container-width grid w-full h-fit gap-5 xl:gap-7">
+              <div className="sphere-container relative rounded-[20px] flex flex-row flex-wrap sm:flex-nowrap justify-around bg-[rgba(4,7,31,.6)] shadow-Site border border-solid border-[hsla(0,0%,100%,.07)] gap-5 xl:gap-7 py-7 px-4 xl:px-8 z-10">
+                <div className="container-with-border-column relative flex items-start flex-col w-2/6 sm:w-auto">
                   <div className="lg-earnings w-[unset] break-words">
                     <div className="lg-earnings-title flex items-center">
-                      <h4 className="text-xs text-[#a7c9ee] uppercase whitespace-nowrap tracking-[1.17px] font-semibold">
+                      <h4 className="text-[10px] xl:text-xs text-[#a7c9ee] uppercase whitespace-nowrap tracking-[1.17px] font-semibold">
                         SPHERE PRICE
                       </h4>
-                      <div className="stub text-[11px] text-[#ef4e4e] max-w-fit px-[7px] text-center">
+                      <div className="stub text-[9px] xl:text-[11px] text-[#ef4e4e] max-w-fit px-[7px] text-center">
                         -8.53%
                       </div>
                     </div>
                     <div className="lg-earnings-dollar flex flex-row items-start">
-                      <div className="s relative text-white text-[35px] leading-9 font-extrabold">
+                      <div className="s relative text-white text-[20px] sm:text-[25px] md:text-[35px] leading-9 font-extrabold">
                         $
                       </div>
-                      <div className="b relative text-white text-[55px] leading-[75px] font-extrabold -mt-2 tracking-[-1px]">
+                      <div className="b relative text-white text-[30px] sm:text-[45px] md:text-[55px] leading-[65px] sm:leading-[75px] font-extrabold -mt-2 tracking-[-1px]">
                         0
                       </div>
-                      <div className="s relative text-white text-[35px] leading-9 font-extrabold">
+                      <div className="s relative text-white text-[20px] sm:text-[25px] md:text-[35px] leading-9 font-extrabold">
                         .0319
                       </div>
-                      <div className="s relative text-white text-[35px] leading-9 font-extrabold"></div>
+                      <div className="s relative text-white text-[20px] sm:text-[25px] md:text-[35px] leading-9 font-extrabold"></div>
                     </div>
                   </div>
                 </div>
-                <div className="container-with-border-column relative flex items-start flex-col">
+                <div className="container-with-border-column relative flex items-start flex-col w-2/6 sm:w-auto">
                   <div className="lg-earnings w-[unset] break-words">
                     <div className="lg-earnings-title flex items-center">
-                      <h4 className="text-xs text-[#a7c9ee] uppercase whitespace-nowrap tracking-[1.17px] font-semibold">
+                      <h4 className="text-[10px] xl:text-xs text-[#a7c9ee] uppercase whitespace-nowrap tracking-[1.17px] font-semibold">
                         MARKET CAP
                       </h4>
                     </div>
                     <div className="lg-earnings-dollar flex flex-row items-start">
-                      <div className="s relative text-white text-[35px] leading-9 font-extrabold">
+                      <div className="s relative text-white text-[20px] sm:text-[25px] md:text-[35px] leading-9 font-extrabold">
                         $
                       </div>
-                      <div className="b relative text-white text-[55px] leading-[75px] font-extrabold -mt-2 tracking-[-1px]">
+                      <div className="b relative text-white text-[30px] sm:text-[45px] md:text-[55px] leading-[65px] sm:leading-[75px] font-extrabold -mt-2 tracking-[-1px]">
                         93
                       </div>
-                      <div className="s relative text-white text-[35px] leading-9 font-extrabold">
+                      <div className="s relative text-white text-[20px] sm:text-[25px] md:text-[35px] leading-9 font-extrabold">
                         .55
                       </div>
-                      <div className="s relative text-white text-[35px] leading-9 font-extrabold">
+                      <div className="s relative text-white text-[20px] sm:text-[25px] md:text-[35px] leading-9 font-extrabold">
                         M
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="container-with-border-column relative flex items-start flex-col">
+                <div className="container-with-border-column relative flex items-start flex-col w-1/2 sm:w-auto">
                   <div className="lg-earnings w-[unset] break-words">
                     <div className="lg-earnings-title flex items-center">
-                      <h4 className="text-xs text-[#a7c9ee] uppercase whitespace-nowrap tracking-[1.17px] font-semibold">
+                      <h4 className="text-[10px] xl:text-xs text-[#a7c9ee] uppercase whitespace-nowrap tracking-[1.17px] font-semibold">
                         DAILY ROI
                       </h4>
                     </div>
                     <div className="lg-earnings-dollar flex flex-row items-start">
-                      <div className="s relative text-white text-[35px] leading-9 font-extrabold"></div>
-                      <div className="b relative text-white text-[55px] leading-[75px] font-extrabold -mt-2 tracking-[-1px]">
+                      <div className="s relative text-white text-[20px] sm:text-[25px] md:text-[35px] leading-9 font-extrabold"></div>
+                      <div className="b relative text-white text-[30px] sm:text-[45px] md:text-[55px] leading-[65px] sm:leading-[75px] font-extrabold -mt-2 tracking-[-1px]">
                         1
                       </div>
-                      <div className="s relative text-white text-[35px] leading-9 font-extrabold">
+                      <div className="s relative text-white text-[20px] sm:text-[25px] md:text-[35px] leading-9 font-extrabold">
                         .91
                       </div>
-                      <div className="s relative text-white text-[35px] leading-9 font-extrabold">
+                      <div className="s relative text-white text-[20px] sm:text-[25px] md:text-[35px] leading-9 font-extrabold">
                         %
                       </div>
                     </div>
@@ -286,46 +286,46 @@ const Home: NextPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="container-2-columns flex gap-7">
-                <div className="sphere-container relative rounded-[20px] flex flex-row justify-around bg-[rgba(4,7,31,.6)] shadow-Site border border-solid border-[hsla(0,0%,100%,.07)] gap-7 py-7 px-8 z-10 flex-grow-0 flex-shrink-0 basis-[calc(50%-15px)]">
+              <div className="container-2-columns flex flex-wrap gap-5 xl:gap-7">
+                <div className="sphere-container relative rounded-[20px] flex flex-row justify-around bg-[rgba(4,7,31,.6)] shadow-Site border border-solid border-[hsla(0,0%,100%,.07)] gap-5 xl:gap-7 py-7 px-4 xl:px-8 z-10 flex-grow-0 flex-shrink-0 basis-full sm:basis-[calc(50%-15px)]">
                   <div className="md-earnings">
-                    <h4 className="text-[13px] text-[#a7c9ee] font-semibold uppercase">
+                    <h4 className="text-[10px] xl:text-[13px] text-[#a7c9ee] font-semibold uppercase">
                       TREASURY BALANCE
                     </h4>
                     <div className="md-earnings-dollar w-full flex flex-row justify-center">
-                      <h4 className="text-2xl text-white font-extrabold leading-8 text-center">
+                      <h4 className="text-xl sm:text-2xl text-white font-extrabold leading-8 text-center">
                         $ 22.15M
                       </h4>
                     </div>
                   </div>
                   <div className="md-earnings">
-                    <h4 className="text-[13px] text-[#a7c9ee] font-semibold uppercase">
+                    <h4 className="text-[10px] xl:text-[13px] text-[#a7c9ee] font-semibold uppercase">
                       TODAY&apos;S TREASURY GAINS
                     </h4>
                     <div className="md-earnings-dollar w-full flex flex-row justify-center">
-                      <h4 className="text-2xl text-white font-extrabold leading-8 text-center">
+                      <h4 className="text-xl sm:text-2xl text-white font-extrabold leading-8 text-center">
                         $ 141,083.72
                       </h4>
                     </div>
                   </div>
                 </div>
-                <div className="sphere-container relative rounded-[20px] flex flex-row justify-around bg-[rgba(4,7,31,.6)] shadow-Site border border-solid border-[hsla(0,0%,100%,.07)] gap-7 py-7 px-8 z-10 flex-grow-0 flex-shrink-0 basis-[calc(50%-15px)]">
+                <div className="sphere-container relative rounded-[20px] flex flex-row justify-around bg-[rgba(4,7,31,.6)] shadow-Site border border-solid border-[hsla(0,0%,100%,.07)] gap-5 xl:gap-7 py-7 px-4 xl:px-8 z-10 flex-grow-0 flex-shrink-0 basis-full sm:basis-[calc(50%-15px)]">
                   <div className="md-earnings">
-                    <h4 className="text-[13px] text-[#a7c9ee] font-semibold uppercase">
+                    <h4 className="text-[10px] xl:text-[13px] text-[#a7c9ee] font-semibold uppercase">
                       TOTAL WALLETS
                     </h4>
                     <div className="md-earnings-dollar w-full flex flex-row justify-center">
-                      <h4 className="text-2xl text-white font-extrabold leading-8 text-center">
+                      <h4 className="text-xl sm:text-2xl text-white font-extrabold leading-8 text-center">
                         36,134
                       </h4>
                     </div>
                   </div>
                   <div className="md-earnings">
-                    <h4 className="text-[13px] text-[#a7c9ee] font-semibold uppercase">
+                    <h4 className="text-[10px] xl:text-[13px] text-[#a7c9ee] font-semibold uppercase">
                       DYSON INDEX
                     </h4>
                     <div className="md-earnings-dollar w-full flex flex-row justify-center">
-                      <h4 className="text-2xl text-white font-extrabold leading-8 text-center">
+                      <h4 className="text-xl sm:text-2xl text-white font-extrabold leading-8 text-center">
                         2.0110 x
                       </h4>
                     </div>
@@ -335,25 +335,25 @@ const Home: NextPage = () => {
               <div className="sphere-container relative rounded-[20px] flex flex-row justify-center items-center bg-[rgba(4,7,31,.6)] shadow-Site border border-solid border-[hsla(0,0%,100%,.07)] gap-7 py-7 px-8 z-10">
                 <div className="lg-earnings w-[unset] break-words">
                   <div className="lg-earnings-title flex items-center">
-                    <h4 className="text-xs text-[#a7c9ee] uppercase whitespace-nowrap tracking-[1.17px] font-semibold">
+                    <h4 className="text-[10px] xl:text-sm text-[#a7c9ee] uppercase whitespace-nowrap tracking-[1.17px] font-semibold">
                       🔥 TOTAL TOKENS BURNED TO DATE 🔥
                     </h4>
                   </div>
                   <div className="lg-earnings-dollar flex flex-row items-start">
-                    <div className="s relative text-white text-[35px] leading-9 font-extrabold"></div>
-                    <div className="b relative text-white text-[55px] leading-[75px] font-extrabold -mt-2 tracking-[-1px]">
+                    <div className="s relative text-white text-[20px] sm:text-[35px] leading-9 font-extrabold"></div>
+                    <div className="b relative text-white text-[35px] sm:text-[55px] leading-[75px] font-extrabold -mt-2 tracking-[-1px]">
                       30,793,633
                     </div>
-                    <div className="s relative text-white text-[35px] leading-9 font-extrabold">
+                    <div className="s relative text-white text-[20px] sm:text-[35px] leading-9 font-extrabold">
                       .60
                     </div>
-                    <div className="s relative text-white text-[35px] leading-9 font-extrabold"></div>
+                    <div className="s relative text-white text-[20px] sm:text-[35px] leading-9 font-extrabold"></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="project-health-wrapper max-w-[290px] w-full">
-              <div className="sphere-container relative rounded-[20px] flex flex-col justify-around bg-[rgba(4,7,31,.6)] shadow-Site border border-solid border-[hsla(0,0%,100%,.07)] gap-7 py-7 px-8 z-10 pb-0 mb-8">
+            <div className="project-health-wrapper lg:max-w-[290px] w-full flex lg:flex flex-wrap justify-between items-start">
+              <div className="sphere-container w-full sm:w-[calc(50%-15px)] lg:w-full relative rounded-[20px] flex flex-col justify-around bg-[rgba(4,7,31,.6)] shadow-Site border border-solid border-[hsla(0,0%,100%,.07)] gap-7 py-7 px-8 z-10 pb-0 mb-8">
                 <div className="project-health-row w-full">
                   <h4 className="text-xs text-[#a7c9ee] uppercase font-semibold tracking-[2px]">
                     BUY TAX
@@ -382,7 +382,7 @@ const Home: NextPage = () => {
                   <p className="text-lg text-[#ff0093] mb-1">869.23B / 1.50M</p>
                 </div>
               </div>
-              <div className="sphere-container relative rounded-[20px] flex flex-col justify-around bg-[rgba(4,7,31,.6)] shadow-Site border border-solid border-[hsla(0,0%,100%,.07)] gap-7 py-7 px-8 z-10">
+              <div className="sphere-container w-full sm:w-[calc(50%-15px)] lg:w-full relative rounded-[20px] flex flex-col justify-around bg-[rgba(4,7,31,.6)] shadow-Site border border-solid border-[hsla(0,0%,100%,.07)] gap-7 py-7 px-8 z-10">
                 <div className="project-health-row w-full">
                   <h4 className="text-xs text-[#a7c9ee] uppercase font-semibold tracking-[2px]">
                     YOUR CURRENT TAX BRACKET
