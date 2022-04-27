@@ -3,6 +3,7 @@ import React from 'react';
 const IconProfile = () => {
   return (
     <svg
+      className="ml-1"
       width="18px"
       height="18px"
       viewBox="0 0 24 24"
