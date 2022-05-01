@@ -1,8 +1,7 @@
 import '../src/assets/styles//globals.css';
-import type { AppProps } from 'next/app';
 import Header from '../src/components/Header';
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }) {
   return (
     <div className="page-container pt-[70px]">
       <Header />

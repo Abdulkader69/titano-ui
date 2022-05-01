@@ -1,53 +1,36 @@
 import React from 'react';
+import { CountdownCircleTimer } from 'react-countdown-circle-timer';
+
+const formatRemainingTime = (time) => {
+  const minutes = Math.floor((time % 3600) / 60);
+  const seconds = time % 60;
+
+  return `${minutes}:${seconds}`;
+};
+
+const renderTime = ({ remainingTime }) => {
+  // if (remainingTime === 0) {
+  //   return <div className="timer">Too lale...</div>;
+  // }
+
+  return (
+    <div className="timer">
+      <div className="text">REBASES EVERY 30 MINUTES</div>
+      <div className="value">{formatRemainingTime(remainingTime)}</div>
+    </div>
+  );
+};
 
 const GraphCircle = () => {
   return (
-    <svg viewBox="0 0 56 56">
-      <defs>
-        <linearGradient id="_f177b3aim" x1="50%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="rgb(203,0,127)"></stop>
-          <stop offset="90%" stopColor="rgb(204,12,138)"></stop>
-        </linearGradient>
-        <linearGradient id="_ctq2ywk93" x1="0%" y1="0%" x2="50%" y2="100%">
-          <stop offset="0%" stopColor="rgb(204,85,200)"></stop>
-          <stop offset="90%" stopColor="rgb(204,12,138)"></stop>
-        </linearGradient>
-      </defs>
-      <path
-        className="rebase-hide hidden"
-        fill="none"
-        d="
-              M 3 28
-              a 25 25 0 1 1 50 0
-              a 25 25 0 1 1 -50 0
-            "
-        strokeWidth="6"
-      ></path>
-      <path
-        className=""
-        fill="none"
-        stroke="url(#_f177b3aim)"
-        strokeDasharray="78.53981633974483,78.53981633974483"
-        strokeLinecap="round"
-        d="
-              M 28 3
-              a 25 25 0 1 1 0 50
-            "
-        strokeWidth="6"
-      ></path>
-      <path
-        className=""
-        fill="none"
-        stroke="url(#_ctq2ywk93)"
-        strokeDasharray="191.37125096342814,78.53981633974483"
-        strokeLinecap="round"
-        d="
-              M 28 53
-              a 25 25 0 0 1 0 -50
-            "
-        strokeWidth="6"
-      ></path>
-    </svg>
+    <CountdownCircleTimer
+      isPlaying
+      duration={1800}
+      colors={'#d81384'}
+      onComplete={() => [true, 1000]}
+    >
+      {renderTime}
+    </CountdownCircleTimer>
   );
 };
 

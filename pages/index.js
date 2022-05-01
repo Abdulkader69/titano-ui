@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
 import MetaMaskIcon from '../src/assets/images/metamask.99c96182.svg';
 import { Popover } from '@headlessui/react';
@@ -6,7 +5,7 @@ import IconWallet from '../src/components/IconWallet';
 import GraphCharts from '../src/components/GraphCharts';
 import GraphCircle from '../src/components/GraphCircle';
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <div className="site-container">
       <Head>
@@ -157,18 +156,6 @@ const Home: NextPage = () => {
                 <div className="rebase-circle relative flex justify-center items-center mb-9 w-[162px]">
                   <div className="CircularProgress w-[160px] h-[160px] relative">
                     <GraphCircle />
-                  </div>
-                  <div className="rebase-circle-content absolute top-[20%] left-[32%] text-center">
-                    <p className="text-[10px] xl:text-[13px] text-[hsla(0,0%,100%,.6)] text-center max-w-[160px] m-auto pb-1">
-                      REBASES
-                      <br />
-                      EVERY 30
-                      <br />
-                      MINUTES
-                    </p>
-                    <h4 className="text-2xl font-extrabold w-full text-center text-white">
-                      00:00
-                    </h4>
                   </div>
                 </div>
                 <div className="md-earnings">

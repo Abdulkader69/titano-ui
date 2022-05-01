@@ -51,7 +51,7 @@ export default function Header() {
                   : 'border-transparent'
               }`}
             >
-              <Link href="/">
+              <Link href="/calculator">
                 <a>
                   <p>Calculator</p>
                 </a>
@@ -178,8 +178,8 @@ export default function Header() {
               ></span>
             </button>
           </div>
-          <div className="profile-dropdown">
-            <Popover className="relative">
+          <div className="profile-dropdown relative">
+            <Popover>
               {/* {({ open }) => ( */}
               <>
                 <Popover.Button className="wallet-dropdown-icon">
@@ -194,22 +194,42 @@ export default function Header() {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <Popover.Panel className="fixed z-10 w-screen max-w-sm px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
-                    <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                      <div className="p-4 bg-gray-50">
-                        <a
-                          href="##"
-                          className="flow-root px-2 py-2 transition duration-150 ease-in-out rounded-md hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                  <Popover.Panel className="absolute z-[99] max-w-[80%] top-[54px] right-0 h-96 min-w-[300px] sm:min-w-[640px] grid grid-cols-1 sm:grid-cols-2 bg-[#1d2035] shadow-Site border border-solid border-[hsla(0,0%,100%,.1)] rounded-md">
+                    <div className="tick absolute top-[-7px] right-[13px] w-[14px] h-[14px] bg-[#15172a] rotate-45"></div>
+                    <div className="wallet-dropdown-box-column py-12 pl-10 flex flex-col items-start gap-5">
+                      <h2 className="text-xs text-[#a7c9ee] font-semibold tracking-[3px]">
+                        CONNECTED WALLET
+                      </h2>
+                      <h2 className="text-xs text-[#a7c9ee] font-semibold tracking-[3px]">
+                        CONNECT CONTRACT
+                      </h2>
+                      <div className="menu flex items-start">
+                        <button className="bg-transparent border-none flex items-center gap-2 cursor-pointer">
+                          <img
+                            src="https://app.sphere.finance/static/media/SPHERE.aab58ad8.svg"
+                            alt="sphere"
+                            className="w-[25px]"
+                          />
+                          <div className="wrap flex flex-col text-[hsla(0,0%,100%,.6)] text-left">
+                            <h2 className="text-sm font-semibold">
+                              Add SPHERE
+                            </h2>
+                            <p className="text-xs">to your wallet</p>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                    <div className="wallet-dropdown-box-column py-12 pl-10 pr-7 flex flex-col items-start gap-5 bg-[#15172a]">
+                      <h2 className="text-xs text-[#a7c9ee] font-semibold tracking-[3px]">
+                        ACCOUNT SETTINGS
+                      </h2>
+                      <div className="select-field">
+                        <label
+                          htmlFor="sphereSelect-placeholder"
+                          className="block text-sm text-[hsla(0,0%,100%,.6)]"
                         >
-                          <span className="flex items-center">
-                            <span className="text-sm font-medium text-gray-900">
-                              Documentation
-                            </span>
-                          </span>
-                          <span className="block text-sm text-gray-500">
-                            Start integrating products and tools
-                          </span>
-                        </a>
+                          Currency
+                        </label>
                       </div>
                     </div>
                   </Popover.Panel>
