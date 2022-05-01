@@ -245,7 +245,7 @@ export default function Header() {
           menuExpanded ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <MobileNav />
+        <MobileNav menuExpanded={menuExpanded} setMenuExpanded={setMenuExpanded} />
       </div>
     </header>
   );

@@ -3,7 +3,7 @@ import { Popover } from '@headlessui/react';
 import IconWallet from './IconWallet';
 import { useRouter } from 'next/router';
 
-const MobileNav = () => {
+const MobileNav = ({setMenuExpanded, menuExpanded}) => {
   const router = useRouter();
   return (
     <div className="w-full mx-auto px-4 flex items-center justify-between">
@@ -13,6 +13,9 @@ const MobileNav = () => {
             className={`text-lg text-white transition ease-in relative w-full pt-2 pb-1 border-b border-solid hover:border-[#d81384] ${
               router.pathname == '/' ? 'border-[#d81384]' : ' border-gray-500'
             }`}
+            onClick={() => {
+              setMenuExpanded(!menuExpanded);
+            }}
           >
             <Link href="/">
               <a>
@@ -26,6 +29,9 @@ const MobileNav = () => {
                 ? 'border-[#d81384]'
                 : ' border-gray-500'
             }`}
+            onClick={() => {
+              setMenuExpanded(!menuExpanded);
+            }}
           >
             <Link href="/calculator">
               <a>
