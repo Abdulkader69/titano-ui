@@ -27,7 +27,7 @@ const MobileNav = () => {
                 : ' border-gray-500'
             }`}
           >
-            <Link href="/">
+            <Link href="/calculator">
               <a>
                 <p>Calculator</p>
               </a>
